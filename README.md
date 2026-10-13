@@ -15,11 +15,7 @@ Repository URL:
 https://raw.githubusercontent.com/haroon911/unity-mcp-vpm/main/index.json
 ```
 
-One-click link (VCC / ALCOM):
-
-```
-vcc://vpm/addRepo?url=https%3A%2F%2Fraw.githubusercontent.com%2Fharoon911%2Funity-mcp-vpm%2Fmain%2Findex.json
-```
+**One-click: [Add to VCC / ALCOM](https://haroon911.github.io/unity-mcp-vpm/)** (opens a page with an add button; GitHub READMEs can't contain `vcc://` links directly).
 
 Or manually: **Settings -> Packages -> Add Repository**, then paste the URL.
 

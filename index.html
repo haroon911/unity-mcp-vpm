@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCP for Unity - VPM Repository</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #111418; color: #e8eaed; margin: 0; display: grid; place-items: center; min-height: 100vh; }
+    main { max-width: 560px; padding: 2rem; text-align: center; }
+    h1 { margin-bottom: .25rem; }
+    p { color: #aab0b8; line-height: 1.5; }
+    .btn { display: inline-block; margin: .4rem; padding: .8rem 1.4rem; border-radius: 8px; border: 0; font-size: 1rem; font-weight: 600; cursor: pointer; text-decoration: none; }
+    .primary { background: #4f8cff; color: #fff; }
+    .secondary { background: #2a2f37; color: #e8eaed; }
+    code { display: block; margin: 1rem 0; padding: .7rem; background: #1b1f25; border-radius: 6px; word-break: break-all; font-size: .85rem; }
+    small { color: #7d848d; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>MCP for Unity</h1>
+    <p>VPM repository mirror of <a href="https://github.com/CoplayDev/unity-mcp" style="color:#4f8cff">CoplayDev/unity-mcp</a>.
+       Add it once, then install it in any project from VCC or ALCOM.</p>
+
+    <a class="btn primary" id="add" href="#">Add to VCC / ALCOM</a>
+    <button class="btn secondary" id="copy" type="button">Copy repository URL</button>
+
+    <code id="url"></code>
+    <small>If the button does nothing, make sure VCC or ALCOM is installed, or copy the URL and use
+      Settings &rarr; Packages &rarr; Add Repository.</small>
+  </main>
+  <script>
+    var repoUrl = "https://raw.githubusercontent.com/haroon911/unity-mcp-vpm/main/index.json";
+    document.getElementById("url").textContent = repoUrl;
+    document.getElementById("add").href = "vcc://vpm/addRepo?url=" + encodeURIComponent(repoUrl);
+    document.getElementById("copy").addEventListener("click", function () {
+      navigator.clipboard.writeText(repoUrl).then(function () {
+        document.getElementById("copy").textContent = "Copied!";
+      });
+    });
+  </script>
+</body>
+</html>
